@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Meal Box</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="todo">TODO</string>
+    <string name="get_your_taste_today">Get your taste today</string>
+    <string name="login_signup">Login/SignUp</string>
+    <string name="_91">+91</string>
+    <string name="by_continuing_you_are_agree_to_our_nterm_and_condition">By continuing you are agree to our \nTerm and condition</string>
+    <string name="or">or</string>
+    <string name="we_don_t_have_your_location_yet">We don\'t have your location , yet!</string>
+    <string name="set_your_location_to_exploring_your_own_ncuisine_and_find_your_perfect_meal">Set your location to exploring your own \ncuisine and find your perfect meal</string>
+    <string name="enable_device_location">Enable device location</string>
+    <string name="we_only_access_your_location_while_you_are_using_the_app_for_the_nimprove_the_experience">We only access your location , while you are using the app for the \nimprove the experience</string>
+</resources>
