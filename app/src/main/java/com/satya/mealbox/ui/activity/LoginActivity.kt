@@ -11,19 +11,16 @@ import android.location.Address
 import android.location.Geocoder
 import android.location.Location
 import android.location.LocationManager
-import android.os.Build
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Looper
 import android.provider.Settings
 import android.util.Log
 import android.view.View
-import android.view.WindowInsets
 import android.view.WindowManager
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import com.google.android.gms.location.*
-import com.satya.mealbox.R
 import com.satya.mealbox.constant.Constants.Companion.PERMISIISON_ID
 import com.satya.mealbox.constant.Constants.Companion.sharedPrefFile
 import com.satya.mealbox.databinding.ActivityLoginBinding
@@ -36,7 +33,7 @@ class LoginActivity : AppCompatActivity() {
     private lateinit var mFusedLocationClient: FusedLocationProviderClient
     private var latitude = 0.0
     private var longitude = 0.0
-    var country: String = ""
+    private var country: String = ""
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -103,11 +100,12 @@ class LoginActivity : AppCompatActivity() {
 
     @SuppressLint("MissingPermission")
     private fun requestNewLocationData() {
-        val mLocationRequest = LocationRequest()
-        mLocationRequest.priority = LocationRequest.PRIORITY_HIGH_ACCURACY
-        mLocationRequest.interval = 0
-        mLocationRequest.fastestInterval = 0
-        mLocationRequest.numUpdates = 1
+        val mLocationRequest =  LocationRequest.create().apply {
+            interval = 0
+            fastestInterval = 0
+            priority = LocationRequest.PRIORITY_HIGH_ACCURACY
+            numUpdates = 1
+        }
 
         mFusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
         Looper.myLooper()?.let {

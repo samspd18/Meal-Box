@@ -11,11 +11,10 @@
     //custom colors
     <color name="meal_box_blue">#002D88</color>
     <color name="grey">#D78E8E8E</color>
-    <color name="navigation">#002D88</color>
-    <color name="navigation_background">#FFFFFF</color>
-    <color name="screen_background">#FFFFFF</color>
-    <color name="screen_headline_color">#002D88</color>
+    <color name="navigation">#FFFFFF</color>
+    <color name="navigation_background">#CB9B9B9B</color>
+    <color name="screen_background">#95000000</color>
+    <color name="screen_headline_color">#FFFFFF</color>
     <color name="red">#ED0000</color>
     <color name="orange">#FF4800</color>
-
 </resources>

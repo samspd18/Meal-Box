@@ -1,22 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.home.HomeFragment">
+    android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/text_home"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:orientation="vertical"
+        tools:context=".ui.fragment.HomeFragment"
+        android:background="@color/screen_background">
+
+        <RelativeLayout
+            android:id="@+id/rlTopRecipes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/top_recipes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/wellfleet"
+                android:text="@string/top_indian_recipes"
+                android:textColor="@color/screen_headline_color"
+                android:textSize="@dimen/_13ssp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_5sdp"
+                android:fontFamily="@font/wellfleet"
+                android:text="More"
+                android:paddingTop="@dimen/_2sdp"
+                android:textColor="@color/red"
+                android:textSize="@dimen/_10ssp" />
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvIndianRecipes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlTopRecipes"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/recipes_layout" />
+
+        <TextView
+            android:id="@+id/tvTopCuisine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rvIndianRecipes"
+            android:fontFamily="@font/wellfleet"
+            android:text="@string/top_cuisines_for_you"
+            android:textColor="@color/screen_headline_color"
+            android:textSize="@dimen/_13ssp"
+            android:layout_margin="@dimen/_4sdp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvCuisine"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tvTopCuisine"
+            android:layout_centerInParent="true"
+            android:visibility="visible"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="4"
+            tools:listitem="@layout/cuisine_layout" />
+
+
+    </RelativeLayout>
+</ScrollView>

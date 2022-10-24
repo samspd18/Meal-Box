@@ -18,17 +18,41 @@
             android:background="?attr/colorPrimary"
             app:popupTheme="@style/Theme.MealBox.PopupOverlay" />
 
+        <RelativeLayout
+            android:id="@+id/rlLocationTracing"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/meal_box_blue">
+
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_23sdp"
+                android:src="@drawable/location"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_gravity="center_vertical"/>
+
+            <TextView
+                android:id="@+id/tvLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="@dimen/_35sdp"
+                android:fontFamily="@font/wellfleet"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_13ssp" />
+
+            <ImageView
+                android:layout_width="@dimen/_15sdp"
+                android:layout_height="@dimen/_15sdp"
+                android:src="@drawable/arraow_down"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_toRightOf="@id/tvLocation"
+                android:layout_gravity="center_vertical"/>
+
+        </RelativeLayout>
+
     </com.google.android.material.appbar.AppBarLayout>
 
     <include layout="@layout/content_main" />
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_marginEnd="@dimen/fab_margin"
-        android:layout_marginBottom="16dp"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

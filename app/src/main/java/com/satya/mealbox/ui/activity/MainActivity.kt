@@ -1,5 +1,8 @@
 package com.satya.mealbox.ui.activity
 
+import android.content.Context
+import android.content.Intent
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.Menu
 import com.google.android.material.snackbar.Snackbar
@@ -12,6 +15,8 @@ import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import com.satya.mealbox.R
+import com.satya.mealbox.constant.Constants
+import com.satya.mealbox.constant.Constants.Companion.sharedPrefFile
 import com.satya.mealbox.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -27,10 +32,17 @@ class MainActivity : AppCompatActivity() {
 
         setSupportActionBar(binding.appBarMain.toolbar)
 
-        binding.appBarMain.fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
+        val sharedPreferences: SharedPreferences = this.getSharedPreferences(sharedPrefFile, Context.MODE_PRIVATE)
+        val city = sharedPreferences.getString("country","Delhi, India")
+
+        binding.appBarMain.tvLocation.text = city.toString()
+
+        //for going location activity and the location
+        binding.appBarMain.rlLocationTracing.setOnClickListener {
+            val intent = Intent(this, LocationActivity::class.java)
+            startActivity(intent)
         }
+
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
         val navController = findNavController(R.id.nav_host_fragment_content_main)
@@ -38,7 +50,7 @@ class MainActivity : AppCompatActivity() {
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow
+                R.id.nav_home
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)

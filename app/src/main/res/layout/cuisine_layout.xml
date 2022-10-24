@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/screen_background"
+    android:layout_margin="@dimen/_5sdp">
+<com.google.android.material.card.MaterialCardView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cvCuisine"
+    android:layout_width="@dimen/_65sdp"
+    android:layout_height="@dimen/_65sdp"
+    app:cardCornerRadius="@dimen/_50sdp"
+    app:cardElevation="@dimen/_40sdp"
+    app:strokeColor="@color/screen_headline_color"
+    app:strokeWidth="@dimen/_1sdp"
+    android:padding="@dimen/_1sdp"
+    android:backgroundTint="@color/screen_background">
+
+    <ImageView
+        android:id="@+id/ivCuisineImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/base_image"
+        android:contentDescription="@string/todo" />
+
+</com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/tvCuisineName"
+        android:layout_width="@dimen/_65sdp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cvCuisine"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:fontFamily="@font/wellfleet"
+        android:gravity="center"
+        android:text="@string/indian_ncuisine"
+        android:textColor="@color/screen_headline_color"
+        android:textSize="@dimen/_10ssp" />
+
+</RelativeLayout>
+
