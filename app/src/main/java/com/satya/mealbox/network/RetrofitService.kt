@@ -8,6 +8,6 @@ import retrofit2.http.GET
 interface RetrofitService {
 
     //top indian recipes
-    @GET("complexSearch?apiKey=${Constants.apiKey}&number=10&cuisine=Indian")
+    @GET("recipes/complexSearch?apiKey=${Constants.apiKey}&number=10&cuisine=Indian")
     fun getAllIndianRecipes(): Call<TopIndianRecipes>
 }

@@ -17,4 +17,5 @@
     <color name="screen_headline_color">#FFFFFF</color>
     <color name="red">#ED0000</color>
     <color name="orange">#FF4800</color>
+    <color name="recipes_color">#000000</color>
 </resources>

@@ -11,7 +11,6 @@
     android:layout_width="@dimen/_65sdp"
     android:layout_height="@dimen/_65sdp"
     app:cardCornerRadius="@dimen/_50sdp"
-    app:cardElevation="@dimen/_40sdp"
     app:strokeColor="@color/screen_headline_color"
     app:strokeWidth="@dimen/_1sdp"
     android:padding="@dimen/_1sdp"

@@ -6,7 +6,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/screen_background"
     app:cardCornerRadius="@dimen/_8sdp"
-    android:layout_margin="@dimen/_2sdp">
+    app:strokeColor="@color/white"
+    app:strokeWidth="0.4dp"
+    android:layout_margin="@dimen/_4sdp">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -16,7 +18,7 @@
         <ImageView
             android:id="@+id/ivBaseImage"
             android:layout_width="@dimen/_210sdp"
-            android:layout_height="@dimen/_105sdp"
+            android:layout_height="@dimen/_115sdp"
             android:contentDescription="@string/todo"
             android:scaleType="fitXY"
             android:src="@drawable/base_image" />
@@ -24,15 +26,17 @@
         <TextView
             android:id="@+id/tvBaseText"
             android:layout_width="@dimen/_210sdp"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/_35sdp"
             android:layout_below="@id/ivBaseImage"
-            android:text="@string/rice_and_peas_with_coconut_curry_mackerel"
-            android:textSize="@dimen/_13ssp"
-            android:gravity="center"
-            android:textColor="@color/meal_box_blue"
             android:layout_marginTop="@dimen/_2sdp"
-            android:background="@color/white"
-            android:fontFamily="@font/wellfleet"/>
+            android:background="@color/screen_background"
+            android:fontFamily="@font/wellfleet"
+            android:gravity="center"
+            android:maxLines="3"
+            android:paddingBottom="@dimen/_2sdp"
+            android:text="@string/rice_and_peas_with_coconut_curry_mackerel"
+            android:textColor="@color/screen_headline_color"
+            android:textSize="@dimen/_11ssp" />
     </RelativeLayout>
 
 </com.google.android.material.card.MaterialCardView>
