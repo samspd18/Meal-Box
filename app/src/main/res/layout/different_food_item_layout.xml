@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/screen_background"
+    android:layout_margin="@dimen/_5sdp">
+    <com.google.android.material.card.MaterialCardView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cvDifferentFood"
+        android:layout_width="@dimen/_55sdp"
+        android:layout_height="@dimen/_55sdp"
+        app:cardCornerRadius="@dimen/_50sdp"
+        app:strokeColor="@color/screen_headline_color"
+        app:strokeWidth="0.01dp"
+        android:padding="@dimen/_1sdp"
+        android:backgroundTint="@color/screen_background">
+
+        <ImageView
+            android:id="@+id/ivDifferentFoodImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/base_image"
+            android:contentDescription="@string/todo" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/tvDifferentFoodName"
+        android:layout_width="@dimen/_55sdp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cvDifferentFood"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/wellfleet"
+        android:gravity="center"
+        android:text="Salad"
+        android:textColor="@color/screen_headline_color"
+        android:textSize="@dimen/_10ssp" />
+
+</RelativeLayout>
+

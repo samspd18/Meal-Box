@@ -9,9 +9,12 @@ import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.satya.mealbox.adapter.CuisineAdapter
+import com.satya.mealbox.adapter.EatsWhatMakesYouHappyAdapter
 import com.satya.mealbox.adapter.TopIndianRecipesAdapter
 import com.satya.mealbox.constant.Cuisine
 import com.satya.mealbox.constant.DifferentCuisine
+import com.satya.mealbox.constant.DifferentFoodItem
+import com.satya.mealbox.constant.MakesYouHappy
 import com.satya.mealbox.databinding.FragmentHomeBinding
 import com.satya.mealbox.network.RetrofitInstance
 import com.satya.mealbox.repositories.Repositories
@@ -24,12 +27,14 @@ class HomeFragment : Fragment() {
     private val binding get() = _binding!!
     private val adapter = CuisineAdapter()
     private lateinit var cuisines: Array<Cuisine>
+    private lateinit var eatWahtMakesYouHappy: Array<MakesYouHappy>
 
     //declare the api call
     private lateinit var viewModel: ViewModel
     private val retrofitService = RetrofitInstance.getInstance()
 
     private var topIndianRecipesAdapter = TopIndianRecipesAdapter()
+    private var whatMakesYouHappyAdapter = EatsWhatMakesYouHappyAdapter()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -58,6 +63,8 @@ class HomeFragment : Fragment() {
 
         //binding the cuisine recycler view
         cuisineRecyclerView()
+        //binding what makes you happy recyclerview
+        whatMakesYouHappy()
 
         return root
     }
@@ -73,6 +80,12 @@ class HomeFragment : Fragment() {
         binding.rvCuisine.adapter = adapter
         cuisines = DifferentCuisine.cuisines
         adapter.setCuisines(cuisines)
+    }
+
+    private fun whatMakesYouHappy() {
+        binding.rvWhatMakesYouHappy.adapter = whatMakesYouHappyAdapter
+        eatWahtMakesYouHappy = DifferentFoodItem.differentFood
+        whatMakesYouHappyAdapter.setFoodItems(eatWahtMakesYouHappy)
     }
 
     override fun onDestroyView() {

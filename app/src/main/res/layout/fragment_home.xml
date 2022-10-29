@@ -17,18 +17,21 @@
             android:id="@+id/tvTopCuisine"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:layout_marginBottom="@dimen/_4sdp"
             android:fontFamily="@font/wellfleet"
             android:text="@string/top_cuisines_for_you"
             android:textColor="@color/screen_headline_color"
-            android:textSize="@dimen/_13ssp"
-            android:layout_margin="@dimen/_4sdp" />
+            android:textSize="@dimen/_13ssp" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvCuisine"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:visibility="visible"
             android:layout_below="@id/tvTopCuisine"
+            android:visibility="visible"
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
             app:spanCount="4"
             tools:listitem="@layout/cuisine_layout" />
@@ -44,7 +47,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_5sdp"
-                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_8sdp"
                 android:fontFamily="@font/wellfleet"
                 android:text="@string/top_indian_recipes"
                 android:textColor="@color/screen_headline_color"
@@ -76,6 +79,30 @@
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             tools:listitem="@layout/recipes_layout" />
 
+        <TextView
+            android:id="@+id/tvWhatMakesYouHappy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rvIndianRecipes"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:fontFamily="@font/wellfleet"
+            android:text="Eat what makes you happy"
+            android:textColor="@color/screen_headline_color"
+            android:textSize="@dimen/_13ssp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvWhatMakesYouHappy"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tvWhatMakesYouHappy"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:visibility="visible"
+            android:layout_marginStart="@dimen/_5sdp"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:spanCount="4"
+            tools:listitem="@layout/different_food_item_layout" />
 
     </RelativeLayout>
 </ScrollView>
