@@ -10,4 +10,22 @@
         android:name="com.satya.mealbox.ui.fragment.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_meal_planning"
+        android:name="com.satya.mealbox.ui.fragment.Planned_meal_fragment"
+        android:label="Meal For You"
+        tools:layout="@layout/fragment_planned_meal_fragment" />
+
+    <fragment
+        android:id="@+id/nav_subscription"
+        android:name="com.satya.mealbox.ui.fragment.Subscription_fragment"
+        android:label="Subscriptions"
+        tools:layout="@layout/fragment_subscription_fragment" />
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.satya.mealbox.ui.fragment.Profile_fragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile_fragment" />
 </navigation>

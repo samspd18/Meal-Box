@@ -24,4 +24,9 @@
     <string name="top_indian_recipes">Top Indian recipes</string>
     <string name="top_cuisines_for_you">Top Cuisines For you</string>
     <string name="indian_ncuisine">Indian\nCuisine</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="search">Search</string>
+    <string name="eat_what_makes_you_happy">Eat what makes you happy</string>
+    <string name="more">More</string>
 </resources>

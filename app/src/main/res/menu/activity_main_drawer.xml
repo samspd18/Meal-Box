@@ -8,5 +8,20 @@
             android:id="@+id/nav_home"
             android:icon="@drawable/ic_menu_camera"
             android:title="@string/menu_home" />
+
+        <item
+            android:id="@+id/nav_meal_planning"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Meal For You" />
+
+        <item
+            android:id="@+id/nav_subscription"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Subscription" />
+
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Profile" />
     </group>
 </menu>

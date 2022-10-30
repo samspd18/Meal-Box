@@ -3,6 +3,8 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android Project/Meal Box/app/src/main/res/drawable/close.xml" value="0.1" />
+        <entry key="..\:/Android Project/Meal Box/app/src/main/res/drawable/search.xml" value="0.1" />
         <entry key="..\:/Android Project/Meal Box/app/src/main/res/layout-land/activity_location.xml" value="0.43243243243243246" />
         <entry key="..\:/Android Project/Meal Box/app/src/main/res/layout/activity_location.xml" value="0.2" />
         <entry key="..\:/Android Project/Meal Box/app/src/main/res/layout/activity_login.xml" value="0.2" />

@@ -13,6 +13,77 @@
         tools:context=".ui.fragment.HomeFragment"
         android:background="@color/screen_background">
 
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cvSearch"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:backgroundTint="@color/screen_background"
+            app:cardCornerRadius="@dimen/_8sdp"
+            android:layout_marginHorizontal="@dimen/_8sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            app:strokeWidth="0.3dp"
+            app:strokeColor="@color/screen_headline_color">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/ivSearch"
+                    android:layout_width="@dimen/_26sdp"
+                    android:layout_height="@dimen/_26sdp"
+                    android:layout_marginStart="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_3sdp"
+                    android:src="@drawable/search"
+                    android:contentDescription="@string/todo" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/_40sdp"
+                    android:layout_marginEnd="@dimen/_30sdp"
+                    android:autofillHints=""
+                    android:background="@color/screen_background"
+                    android:fontFamily="@font/wellfleet"
+                    android:hint="@string/search"
+                    android:inputType="text"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:textColor="@color/screen_headline_color"
+                    android:textColorHint="@color/screen_headline_color"
+                    tools:ignore="RtlSymmetry" />
+
+                <ImageView
+                    android:id="@+id/ivClose"
+                    android:layout_width="@dimen/_26sdp"
+                    android:layout_height="@dimen/_26sdp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="@dimen/_4sdp"
+                    android:visibility="invisible"
+                    android:src="@drawable/close"
+                    android:contentDescription="@string/todo" />
+
+
+
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cvSearch"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:ellipsize="marquee"
+            android:fontFamily="@font/wellfleet"
+            android:gravity="center"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:scrollHorizontally="true"
+            android:singleLine="true"
+            android:text="First 10 recipes are free for you"
+            android:textColor="@color/red"
+            android:textStyle="bold" />
+
         <TextView
             android:id="@+id/tvTopCuisine"
             android:layout_width="wrap_content"
@@ -24,6 +95,7 @@
             android:fontFamily="@font/wellfleet"
             android:text="@string/top_cuisines_for_you"
             android:textColor="@color/screen_headline_color"
+            android:layout_below="@+id/tv"
             android:textSize="@dimen/_13ssp" />
 
         <androidx.recyclerview.widget.RecyclerView
@@ -31,6 +103,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@id/tvTopCuisine"
+            android:layout_marginTop="@dimen/_4sdp"
             android:visibility="visible"
             app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
             app:spanCount="4"
@@ -51,7 +124,8 @@
                 android:fontFamily="@font/wellfleet"
                 android:text="@string/top_indian_recipes"
                 android:textColor="@color/screen_headline_color"
-                android:textSize="@dimen/_13ssp" />
+                android:textSize="@dimen/_13ssp"
+                tools:ignore="RelativeOverlap" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -61,8 +135,8 @@
                 android:layout_marginTop="@dimen/_5sdp"
                 android:layout_marginEnd="@dimen/_5sdp"
                 android:fontFamily="@font/wellfleet"
-                android:text="More"
                 android:paddingTop="@dimen/_2sdp"
+                android:text="@string/more"
                 android:textColor="@color/red"
                 android:textSize="@dimen/_10ssp" />
         </RelativeLayout>
@@ -87,7 +161,7 @@
             android:layout_marginStart="@dimen/_5sdp"
             android:layout_marginTop="@dimen/_8sdp"
             android:fontFamily="@font/wellfleet"
-            android:text="Eat what makes you happy"
+            android:text="@string/eat_what_makes_you_happy"
             android:textColor="@color/screen_headline_color"
             android:textSize="@dimen/_13ssp"
             android:textStyle="bold" />
