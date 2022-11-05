@@ -1,7 +1,6 @@
 package com.satya.mealbox.ui.fragment
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -27,7 +26,7 @@ class HomeFragment : Fragment() {
     private val binding get() = _binding!!
     private val adapter = CuisineAdapter()
     private lateinit var cuisines: Array<Cuisine>
-    private lateinit var eatWahtMakesYouHappy: Array<MakesYouHappy>
+    private lateinit var eatWhatMakesYouHappy: Array<MakesYouHappy>
 
     //declare the api call
     private lateinit var viewModel: ViewModel
@@ -84,8 +83,8 @@ class HomeFragment : Fragment() {
 
     private fun whatMakesYouHappy() {
         binding.rvWhatMakesYouHappy.adapter = whatMakesYouHappyAdapter
-        eatWahtMakesYouHappy = DifferentFoodItem.differentFood
-        whatMakesYouHappyAdapter.setFoodItems(eatWahtMakesYouHappy)
+        eatWhatMakesYouHappy = DifferentFoodItem.differentFood
+        whatMakesYouHappyAdapter.setFoodItems(eatWhatMakesYouHappy)
     }
 
     override fun onDestroyView() {

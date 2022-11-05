@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <com.google.android.material.card.MaterialCardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/screen_background"
-    app:cardCornerRadius="@dimen/_8sdp"
+    app:cardCornerRadius="@dimen/_12sdp"
     app:strokeColor="@color/white"
     app:strokeWidth="0.4dp"
     android:layout_margin="@dimen/_4sdp">
@@ -18,22 +17,23 @@
 
         <ImageView
             android:id="@+id/ivBaseImage"
-            android:layout_width="@dimen/_210sdp"
-            android:layout_height="@dimen/_115sdp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_145sdp"
             android:contentDescription="@string/todo"
             android:scaleType="fitXY"
             android:src="@drawable/base_image" />
 
         <TextView
             android:id="@+id/tvBaseText"
-            android:layout_width="@dimen/_210sdp"
-            android:layout_height="@dimen/_35sdp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_below="@id/ivBaseImage"
             android:layout_marginTop="@dimen/_2sdp"
             android:background="@color/screen_background"
             android:fontFamily="@font/wellfleet"
             android:gravity="center"
             android:maxLines="3"
+            android:layout_marginVertical="@dimen/_3sdp"
             android:paddingBottom="@dimen/_2sdp"
             android:text="@string/rice_and_peas_with_coconut_curry_mackerel"
             android:textColor="@color/screen_headline_color"

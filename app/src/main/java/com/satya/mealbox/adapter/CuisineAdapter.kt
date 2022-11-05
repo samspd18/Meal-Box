@@ -1,8 +1,11 @@
 package com.satya.mealbox.adapter
 
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
+import com.satya.mealbox.R
 import com.satya.mealbox.constant.Cuisine
 import com.satya.mealbox.databinding.CuisineLayoutBinding
 import com.squareup.picasso.Picasso
@@ -35,6 +38,15 @@ class CuisineAdapter: RecyclerView.Adapter<CuisineAdapter.CuisineViewHolder>() {
             .load(cuisineData.imageUrl)
             .noFade()
             .into(holder.binding.ivCuisineImage)
+
+        holder.cuisineName = cuisineData.name
+        val bundle = Bundle()
+        bundle.putString("cuisine_name",holder.cuisineName)
+
+        holder.binding.cvCuisine.setOnClickListener {
+            val nav = holder.binding.root.findNavController()
+            nav.navigate(R.id.nav_cuisines,bundle)
+        }
     }
 
     override fun getItemCount(): Int {

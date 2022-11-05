@@ -19,5 +19,7 @@
     <color name="orange">#FF4800</color>
     <color name="recipes_color">#002D88</color>
     <color name="search_color">#002D88</color>
+    <color name="veg_green">#004A10</color>
+
 
 </resources>

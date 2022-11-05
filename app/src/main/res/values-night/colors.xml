@@ -15,9 +15,10 @@
     <color name="navigation_background">#CB9B9B9B</color>
     <color name="screen_background">#95000000</color>
     <color name="screen_headline_color">#FFFFFF</color>
-    <color name="red">#ED0000</color>
+    <color name="red">#FF2600</color>
     <color name="orange">#FF4800</color>
     <color name="recipes_color">#000000</color>
     <color name="search_color">#FFFFFF</color>
+    <color name="veg_green">#004A10</color>
 
 </resources>

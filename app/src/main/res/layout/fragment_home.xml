@@ -61,9 +61,6 @@
                     android:visibility="invisible"
                     android:src="@drawable/close"
                     android:contentDescription="@string/todo" />
-
-
-
             </RelativeLayout>
 
         </com.google.android.material.card.MaterialCardView>
@@ -163,8 +160,7 @@
             android:fontFamily="@font/wellfleet"
             android:text="@string/eat_what_makes_you_happy"
             android:textColor="@color/screen_headline_color"
-            android:textSize="@dimen/_13ssp"
-            android:textStyle="bold" />
+            android:textSize="@dimen/_13ssp" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rvWhatMakesYouHappy"

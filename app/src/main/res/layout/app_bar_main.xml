@@ -29,7 +29,8 @@
                 android:layout_height="@dimen/_23sdp"
                 android:src="@drawable/location"
                 android:layout_marginStart="@dimen/_5sdp"
-                android:layout_gravity="center_vertical"/>
+                android:layout_gravity="center_vertical"
+                android:contentDescription="@string/todo" />
 
             <TextView
                 android:id="@+id/tvLocation"
@@ -46,8 +47,9 @@
                 android:layout_height="@dimen/_15sdp"
                 android:src="@drawable/arraow_down"
                 android:layout_marginStart="@dimen/_10sdp"
-                android:layout_toRightOf="@id/tvLocation"
-                android:layout_gravity="center_vertical"/>
+                android:layout_toEndOf="@id/tvLocation"
+                android:layout_gravity="center_vertical"
+                android:contentDescription="@string/todo" />
 
         </RelativeLayout>
 

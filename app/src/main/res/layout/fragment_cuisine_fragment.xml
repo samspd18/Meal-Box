@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clipToPadding="false"
+    tools:context=".ui.fragment.Cuisine_fragment"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tvCuisines"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_6sdp"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:layout_marginEnd="@dimen/_6sdp"
+        android:layout_marginBottom="@dimen/_6sdp"
+        android:fontFamily="@font/wellfleet"
+        android:text="@string/indian_cuisine"
+        android:textColor="@color/screen_headline_color"
+        android:textSize="@dimen/_13ssp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvVegType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_6sdp"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:layout_marginEnd="@dimen/_6sdp"
+        android:layout_marginBottom="@dimen/_6sdp"
+        android:fontFamily="@font/wellfleet"
+        android:layout_toEndOf="@id/tvCuisines"
+        android:textColor="@color/screen_headline_color"
+        android:textSize="@dimen/_10ssp"
+        android:textStyle="bold" />
+
+    <Switch
+        android:id="@+id/switchVeg"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_10sdp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:layout_marginEnd="@dimen/_3sdp"
+        tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+    <TextView
+        android:id="@+id/tvPrev"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvCuisines"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:layout_marginEnd="@dimen/_3sdp"
+        android:layout_marginBottom="@dimen/_2sdp"
+        android:fontFamily="@font/wellfleet"
+        android:text="Prev"
+        android:textColor="@color/screen_headline_color"
+        android:textSize="@dimen/_10ssp" />
+
+    <TextView
+        android:id="@+id/tvCountText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvCuisines"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:layout_marginEnd="@dimen/_3sdp"
+        android:layout_marginBottom="@dimen/_2sdp"
+        android:fontFamily="@font/wellfleet"
+        android:textColor="@color/screen_headline_color"
+        android:textSize="@dimen/_10ssp" />
+
+
+
+    <TextView
+        android:id="@+id/tvNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvCuisines"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_3sdp"
+        android:fontFamily="@font/wellfleet"
+        android:text="Next"
+        android:textColor="@color/screen_headline_color"
+        android:textSize="@dimen/_10ssp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCuisine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvNext"
+        android:layout_alignParentBottom="false"
+        android:layout_marginHorizontal="@dimen/_3sdp"
+        android:clipToPadding="false"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/specific_cuisine_layout"
+        android:paddingBottom="@dimen/_15sdp"
+        />
+
+</RelativeLayout>
