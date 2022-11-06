@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/_5sdp"
+    android:layout_marginTop="@dimen/_5sdp">
+
+    <TextView
+        android:id="@+id/tvInstructionStep"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/step_1"
+        android:textColor="@color/screen_headline_color"
+        android:textStyle="bold"
+        android:fontFamily="@font/wellfleet"
+        android:textSize="@dimen/_14ssp"/>
+
+    <TextView
+        android:id="@+id/tvInstructionDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/spread_corn_flat"
+        android:layout_below="@id/tvInstructionStep"
+        android:textColor="@color/screen_headline_color"
+        android:layout_marginTop="@dimen/_6sdp"
+        android:fontFamily="@font/wellfleet"
+        android:textSize="@dimen/_11ssp"
+        android:layout_marginBottom="@dimen/_5sdp"/>
+
+</RelativeLayout>

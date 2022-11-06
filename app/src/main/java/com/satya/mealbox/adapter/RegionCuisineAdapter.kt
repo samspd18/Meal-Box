@@ -3,7 +3,9 @@ package com.satya.mealbox.adapter
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
+import com.satya.mealbox.R
 import com.satya.mealbox.constant.Cuisine
 import com.satya.mealbox.databinding.CuisineLayoutBinding
 import com.satya.mealbox.databinding.SpecificCuisineLayoutBinding
@@ -23,7 +25,7 @@ class RegionCuisineAdapter: RecyclerView.Adapter<RegionCuisineAdapter.ViewHolder
 
     class ViewHolder(var binding: SpecificCuisineLayoutBinding) : RecyclerView.ViewHolder(binding.root) {
         var cuisineName: String = ""
-        var cuisineImage: String = ""
+        var recipesId: Int = 0
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -36,14 +38,22 @@ class RegionCuisineAdapter: RecyclerView.Adapter<RegionCuisineAdapter.ViewHolder
         val cuisineData = regionCuisines[position]
         holder.binding.tvBaseText.text = cuisineData.title
 
+
         Picasso.get()
             .load(cuisineData.image)
             .noFade()
             .into(holder.binding.ivBaseImage)
 
         holder.cuisineName = cuisineData.title
+        holder.recipesId = cuisineData.id
+
         val bundle = Bundle()
-        bundle.putString("cuisine_name",holder.cuisineName)
+        bundle.putInt("recipesId",holder.recipesId)
+
+        holder.binding.root.setOnClickListener {
+            val nav = holder.binding.root.findNavController()
+            nav.navigate(R.id.nav_recipes_detail,bundle)
+        }
     }
 
     override fun getItemCount(): Int {

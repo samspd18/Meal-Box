@@ -8,6 +8,7 @@ class Repositories constructor(private val retrofitService: RetrofitService) {
     fun getAllIndianRecipes() = retrofitService.getAllIndianRecipes()
     //for country specific cuisine
     fun getCountrySpecificCuisine(cuisine: String,diet: String) = retrofitService.getAllCountrySpecificCuisines(cuisine,diet)
-
+    //recipes detail
+    fun getRecipesDetail(id: Int) = retrofitService.getRecipesDetail(id)
 
 }

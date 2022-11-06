@@ -30,4 +30,15 @@
     <string name="eat_what_makes_you_happy">Eat what makes you happy</string>
     <string name="more">More</string>
     <string name="indian_cuisine">Indian Cuisine</string>
+    <string name="corn">Corn</string>
+    <string name="_3_4_cup_corn_freshly_hulled_you_can_also_use_frozen_corn_thawed">3/4 cup Corn, freshly hulled (You can also use frozen corn, thawed)</string>
+    <string name="step_1">Step - 1</string>
+    <string name="spread_corn_flat">Spread corn flat on a baking sheet.Spray lightly with olive oil spray.Roast corn in the oven for about 8-10 minutes. (Be careful not to brown too much or burn.)</string>
+    <string name="corn_avocado_salsa">Dish Name</string>
+    <string name="_25_mins">25 Mins</string>
+    <string name="_25_min">Serves</string>
+    <string name="veg">Veg</string>
+    <string name="non_veg">Non-Veg</string>
+    <string name="ingredients">Ingredients</string>
+    <string name="instruction">Instruction</string>
 </resources>

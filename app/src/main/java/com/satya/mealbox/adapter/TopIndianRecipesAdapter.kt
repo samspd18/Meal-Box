@@ -1,8 +1,11 @@
 package com.satya.mealbox.adapter
 
+import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
+import com.satya.mealbox.R
 import com.satya.mealbox.databinding.RecipesLayoutBinding
 import com.satya.mealbox.model.indianRecipes.Result
 import com.squareup.picasso.Picasso
@@ -15,7 +18,9 @@ class TopIndianRecipesAdapter: RecyclerView.Adapter<TopIndianRecipesAdapter.View
         notifyDataSetChanged()
     }
 
-    class  ViewHolder(var binding: RecipesLayoutBinding) : RecyclerView.ViewHolder(binding.root)
+    class  ViewHolder(var binding: RecipesLayoutBinding) : RecyclerView.ViewHolder(binding.root) {
+        var recipesId: Int = 0
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val inflater = LayoutInflater.from(parent.context)
@@ -31,6 +36,16 @@ class TopIndianRecipesAdapter: RecyclerView.Adapter<TopIndianRecipesAdapter.View
             .load(recipesData.image)
             .noFade()
             .into(holder.binding.ivBaseImage)
+
+        holder.recipesId = recipesData.id
+
+        val bundle = Bundle()
+        bundle.putInt("recipesId",holder.recipesId)
+
+        holder.binding.root.setOnClickListener {
+            val nav = holder.binding.root.findNavController()
+            nav.navigate(R.id.nav_recipes_detail,bundle)
+        }
     }
 
     override fun getItemCount(): Int {

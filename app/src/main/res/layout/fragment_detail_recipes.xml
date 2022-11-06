@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/screen_background">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:context=".ui.fragment.DetailRecipesFragment"
+        android:background="@color/screen_background">
+
+        <ImageView
+            android:id="@+id/ivRecipesImage"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_210sdp"
+            android:src="@drawable/defulat_detail_image"
+            android:scaleType="fitXY"
+            android:contentDescription="@string/todo" />
+
+        <TextView
+            android:id="@+id/tvRecipesTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ivRecipesImage"
+            android:layout_marginStart="@dimen/_4sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:layout_marginBottom="@dimen/_7sdp"
+            android:fontFamily="@font/wellfleet"
+            android:text="@string/corn_avocado_salsa"
+            android:textColor="@color/screen_headline_color"
+            android:textSize="@dimen/_16ssp"
+            android:textStyle="bold" />
+
+       <ImageView
+           android:id="@+id/ivServingMinutes"
+           android:layout_width="@dimen/_30sdp"
+           android:layout_height="@dimen/_30sdp"
+           android:src="@drawable/watch"
+           android:scaleType="fitXY"
+           android:layout_marginTop="@dimen/_3sdp"
+           android:layout_marginStart="@dimen/_50sdp"
+           android:layout_below="@+id/tvRecipesTitle"
+           android:contentDescription="@string/todo" />
+
+        <TextView
+            android:id="@+id/tvRecipeTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ivServingMinutes"
+            android:layout_marginStart="@dimen/_47sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:layout_marginBottom="@dimen/_4sdp"
+            android:fontFamily="@font/wellfleet"
+            android:text="@string/_25_mins"
+            android:textColor="@color/screen_headline_color"
+            android:textSize="@dimen/_10ssp"/>
+
+        <ImageView
+            android:id="@+id/ivServingPerson"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_below="@+id/tvRecipesTitle"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:scaleType="fitXY"
+            android:src="@drawable/servings"
+            android:contentDescription="@string/todo" />
+
+        <TextView
+            android:id="@+id/tvRecipeServings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ivServingPerson"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="@dimen/_47sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_4sdp"
+            android:layout_marginBottom="@dimen/_4sdp"
+            android:fontFamily="@font/wellfleet"
+            android:text="@string/_25_min"
+            android:textColor="@color/screen_headline_color"
+            android:textSize="@dimen/_10ssp" />
+
+
+        <ImageView
+            android:id="@+id/ivServingVegetarian"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_below="@+id/tvRecipesTitle"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:layout_marginEnd="@dimen/_45sdp"
+            android:contentDescription="@string/todo"
+            android:scaleType="fitXY"
+            android:src="@drawable/veg"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tvRecipeVeg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ivServingVegetarian"
+            android:layout_marginStart="@dimen/_47sdp"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_50sdp"
+            android:layout_marginBottom="@dimen/_4sdp"
+            android:fontFamily="@font/wellfleet"
+            android:text="@string/veg"
+            android:visibility="visible"
+            android:layout_alignParentEnd="true"
+            android:textColor="@color/screen_headline_color"
+            android:textSize="@dimen/_10ssp"/>
+
+        <ImageView
+            android:id="@+id/ivServingNonVeg"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_below="@+id/tvRecipesTitle"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:layout_marginEnd="@dimen/_45sdp"
+            android:contentDescription="@string/todo"
+            android:scaleType="fitXY"
+            android:src="@drawable/non_veg"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvRecipeNonVeg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ivServingNonVeg"
+            android:layout_marginTop="@dimen/_4sdp"
+            android:layout_marginEnd="@dimen/_38sdp"
+            android:layout_marginBottom="@dimen/_4sdp"
+            android:fontFamily="@font/wellfleet"
+            android:text="@string/non_veg"
+            android:visibility="gone"
+            android:layout_alignParentEnd="true"
+            android:textColor="@color/screen_headline_color"
+            android:textSize="@dimen/_10ssp"/>
+
+        <TextView
+            android:id="@+id/tvIngredients"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvRecipeServings"
+            android:layout_marginStart="@dimen/_7sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/wellfleet"
+            android:text="@string/ingredients"
+            android:layout_marginBottom="@dimen/_6sdp"
+            android:textColor="@color/screen_headline_color"
+            android:textSize="@dimen/_14ssp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvIngredients"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvIngredients"
+            android:layout_marginTop="@dimen/_5sdp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/ingredients_layout"
+            android:layout_marginHorizontal="@dimen/_5sdp"/>
+
+        <TextView
+            android:id="@+id/tvInstructions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/instruction"
+            android:textSize="@dimen/_14ssp"
+            android:textStyle="bold"
+            android:textColor="@color/screen_headline_color"
+            android:fontFamily="@font/wellfleet"
+            android:layout_below="@+id/rvIngredients"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginTop="@dimen/_10sdp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvInstructions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvInstructions"
+            android:layout_marginTop="@dimen/_8sdp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/instruction_layout"
+            android:layout_marginHorizontal="@dimen/_5sdp"/>
+    </RelativeLayout>
+
+</ScrollView>

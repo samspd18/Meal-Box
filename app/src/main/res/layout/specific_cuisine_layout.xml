@@ -34,6 +34,7 @@
             android:gravity="center"
             android:maxLines="3"
             android:layout_marginVertical="@dimen/_3sdp"
+            android:layout_marginHorizontal="@dimen/_3sdp"
             android:paddingBottom="@dimen/_2sdp"
             android:text="@string/rice_and_peas_with_coconut_curry_mackerel"
             android:textColor="@color/screen_headline_color"

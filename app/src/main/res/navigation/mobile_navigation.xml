@@ -34,4 +34,10 @@
         android:name="com.satya.mealbox.ui.fragment.Cuisine_fragment"
         android:label="Cuisine"
         tools:layout="@layout/fragment_cuisine_fragment" />
+
+    <fragment
+        android:id="@+id/nav_recipes_detail"
+        android:name="com.satya.mealbox.ui.fragment.DetailRecipesFragment"
+        android:label="Cuisine"
+        tools:layout="@layout/fragment_detail_recipes" />
 </navigation>
