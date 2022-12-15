@@ -33,6 +33,7 @@ class EatsWhatMakesYouHappyAdapter : RecyclerView.Adapter<EatsWhatMakesYouHappyA
 
         Picasso.get()
             .load(foodItemData.imageUrl)
+            .resize(100, 100)
             .noFade()
             .into(holder.binding.ivDifferentFoodImage)
     }

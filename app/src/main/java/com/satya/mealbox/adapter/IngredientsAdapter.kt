@@ -32,6 +32,7 @@ class IngredientsAdapter : RecyclerView.Adapter<IngredientsAdapter.ViewHolder>()
 
         Picasso.get()
             .load(ingredientsImageUrl+recipesIngredientData.image)
+            .resize(110, 110)
             .noFade()
             .into(holder.binding.ivIngredientImage)
 

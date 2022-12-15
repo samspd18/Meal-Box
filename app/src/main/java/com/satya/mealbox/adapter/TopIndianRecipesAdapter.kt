@@ -34,6 +34,7 @@ class TopIndianRecipesAdapter: RecyclerView.Adapter<TopIndianRecipesAdapter.View
 
         Picasso.get()
             .load(recipesData.image)
+            .resize(150, 150)
             .noFade()
             .into(holder.binding.ivBaseImage)
 

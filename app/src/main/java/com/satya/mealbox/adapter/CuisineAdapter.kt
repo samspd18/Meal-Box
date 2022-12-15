@@ -36,6 +36,7 @@ class CuisineAdapter: RecyclerView.Adapter<CuisineAdapter.CuisineViewHolder>() {
 
         Picasso.get()
             .load(cuisineData.imageUrl)
+            .resize(100, 100)
             .noFade()
             .into(holder.binding.ivCuisineImage)
 

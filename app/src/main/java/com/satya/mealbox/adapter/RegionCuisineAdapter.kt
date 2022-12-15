@@ -41,6 +41,7 @@ class RegionCuisineAdapter: RecyclerView.Adapter<RegionCuisineAdapter.ViewHolder
 
         Picasso.get()
             .load(cuisineData.image)
+            .resize(110, 110)
             .noFade()
             .into(holder.binding.ivBaseImage)
 

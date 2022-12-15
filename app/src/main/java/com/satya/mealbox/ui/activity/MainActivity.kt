@@ -35,13 +35,13 @@ class MainActivity : AppCompatActivity() {
         val sharedPreferences: SharedPreferences = this.getSharedPreferences(sharedPrefFile, Context.MODE_PRIVATE)
         val city = sharedPreferences.getString("country","Delhi, India")
 
-        binding.appBarMain.tvLocation.text = city.toString()
-
-        //for going location activity and the location
-        binding.appBarMain.rlLocationTracing.setOnClickListener {
-            val intent = Intent(this, LocationActivity::class.java)
-            startActivity(intent)
-        }
+//        binding.appBarMain.tvLocation.text = city.toString()
+//
+//        //for going location activity and the location
+//        binding.appBarMain.rlLocationTracing.setOnClickListener {
+//            val intent = Intent(this, LocationActivity::class.java)
+//            startActivity(intent)
+//        }
 
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView

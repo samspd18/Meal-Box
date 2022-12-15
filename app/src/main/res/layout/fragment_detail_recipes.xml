@@ -16,7 +16,7 @@
         <ImageView
             android:id="@+id/ivRecipesImage"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_210sdp"
+            android:layout_height="@dimen/_230sdp"
             android:src="@drawable/defulat_detail_image"
             android:scaleType="fitXY"
             android:contentDescription="@string/todo" />
